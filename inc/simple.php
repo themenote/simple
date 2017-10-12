@@ -67,8 +67,7 @@ echo count($temp);
 	<ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
       <li><a href="/wp-admin/edit.php?post_type=page" class="am-text-success"><span class="am-icon-btn am-icon-file-text"></span><br/>页面<br/><?php $count_pages = wp_count_posts('page'); echo $page_posts = $count_pages->publish; ?></a></li>
       <li><a href="/wp-admin/edit-comments.php" class="am-text-warning"><span class="am-icon-btn am-icon-comments"></span><br/>评论<br/><?php $total_comments = get_comment_count(); echo $total_comments['approved'];?></a></li>
-      <li><a href="/wp-admin/users.php" class="am-text-danger"><span class="am-icon-btn am-icon-user"></span><br/>用户<br/><?php $users=wp_list_authors	 
-        ('echo=0&exclude_admin=0&hide_empty=0&optioncount=1&style=0');  $users=split(',',$users);echo '', count($users), ''; ?></a></li>
+      <li><a href="/wp-admin/users.php" class="am-text-danger"><span class="am-icon-btn am-icon-user"></span><br/>用户<br/><?php $result = count_users(); echo ' ', $result['total_users'], ' ';?></a></li>
       <li><a class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br/>在线用户<br/><?php counter_user_online($temp); ?></a></li>
     </ul>
     <hr/>
