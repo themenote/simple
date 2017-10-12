@@ -1,5 +1,4 @@
 <?php
-
 add_action('admin_menu','theme_setting');
 
 function theme_setting(){
